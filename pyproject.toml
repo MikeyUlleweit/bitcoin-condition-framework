@@ -1,0 +1,54 @@
+[project]
+name = "bitcoin-condition-framework"
+version = "0.1.0"
+description = "Institutional-quality Bitcoin market condition research framework"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas",
+    "plotly",
+    "pydantic",
+    "PyYAML",
+    "requests",
+    "streamlit",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-m 'not live'"
+markers = [
+    "live: requires access to a real external data provider",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [
+    "venv",
+    ".venv",
+    "notebooks",
+    "data",
+    "logs",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+strict = true
+exclude = [
+    "venv",
+    ".venv",
+    "notebooks",
+    "data",
+    "logs",
+]

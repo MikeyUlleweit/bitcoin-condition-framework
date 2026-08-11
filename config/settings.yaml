@@ -1,0 +1,9 @@
+engine:
+  minimum_required_signals: 4
+  required_categories:
+    - "Liquidity Condition"
+    - "Miner Condition"
+    - "Holder Condition"
+    - "Leverage Condition"
+    - "Blockspace / Network Demand"
+    - "Market Regime / Rotation"

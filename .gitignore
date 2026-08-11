@@ -1,0 +1,51 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging and builds
+*.egg-info/
+build/
+dist/
+
+# Tests and coverage
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local databases and generated data
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+data/*
+!data/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Editors and OS metadata
+.DS_Store
+.idea/
+.vscode/
